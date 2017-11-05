@@ -1,0 +1,20 @@
+{
+  "development": {
+    "put": "src",
+    "out": ".local",
+    "process": {},
+    "weirs": [["embed", ["jsEmbed", "utf8"]]],
+    "ignore": {
+      "targets": ["favicons", "embed/ganalytics.js"]
+    }
+  },
+  "production": {
+    "put": "src",
+    "out": "docs",
+    "process": {},
+    "weirs": [["embed", ["jsEmbed", "utf8"]], ["favicons", "pngToFavicons"]],
+    "ignore": {
+      "targets": ["embed/onerror.js"]
+    }
+  }
+}
